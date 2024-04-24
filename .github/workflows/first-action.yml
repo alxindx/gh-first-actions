@@ -23,13 +23,21 @@ jobs:
     # Starting to define the steps to be executed
     # 'steps:' is required, it takes a list
     steps:
-        # name of the step
+      # name of the step
       - name: print greeting
         # 'run' here defines the command that should be ran on the command line
         run: echo "Hello World!"
 
       - name: print goodbye
         run: echo "Done - bye!"
+
+      # You can run multiple shell commands by adding the | symbol after the 'run:' key 
+      - name: multi-line shell commands
+        run: |
+          echo "First Command"
+          echo "Second Command"
+          echo "Finished multiple commands"
+      
     
 
     
